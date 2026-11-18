@@ -1,0 +1,43 @@
+{
+  "name": "xinlan-workbench",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 5173",
+    "build": "tsc -b && vite build",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src tests --max-warnings 0",
+    "test:e2e": "python ../scripts/frontend_e2e.py",
+    "types:generate": "python scripts/generate_types.py"
+  },
+  "dependencies": {
+    "@fontsource-variable/noto-sans-sc": "5.3.1",
+    "@fontsource-variable/noto-serif-sc": "5.3.1",
+    "@fontsource/ibm-plex-mono": "5.3.0",
+    "@mantine/core": "8.3.18",
+    "@mantine/hooks": "8.3.18",
+    "echarts": "6.1.0",
+    "lucide-react": "0.468.0",
+    "react": "19.2.6",
+    "react-dom": "19.2.6"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.11.1",
+    "@playwright/test": "1.58.2",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "eslint": "9.39.5",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.56.1",
+    "vite": "8.1.6"
+  },
+  "overrides": {
+    "@typescript-eslint/typescript-estree": {
+      "minimatch": "11.0.8"
+    }
+  }
+}

@@ -1,0 +1,55 @@
+project:
+  name: "智融脑机"
+  version: "2.0.0"
+
+# AI 科研助手配置
+ai_assistant:
+  backend: "ollama"
+  base_url: "http://localhost:11434/v1"
+  api_key: "ollama"
+  model_name: "qwen2.5:7b"
+  temperature: 0.7
+  max_history: 50
+
+# 默认信号参数
+signal_defaults:
+  sampling_rate: 256
+  eeg_channels: 32
+  page_duration: 5.0
+
+# 解码器配置
+decoding:
+  # SVM 默认参数
+  svm:
+    kernel: "rbf"
+    C: 1.0
+    gamma: "scale"
+    probability: true
+
+  # EEGNet 默认参数
+  eegnet:
+    dropout_rate: 0.5
+    learning_rate: 0.001
+    batch_size: 32
+    epochs: 200
+    patience: 20
+    F1: 8
+    F2: 16
+    D: 2
+
+  # 多模态融合网络
+  multimodal_nn:
+    hidden_dim: 128
+    n_layers: 2
+    dropout: 0.3
+    fusion_method: "attention"
+
+  # 交叉验证
+  cross_validation:
+    method: "stratified_kfold"
+    n_splits: 5
+    test_size: 0.2
+
+  # 信息传输率
+  itr:
+    trial_time: 4.0

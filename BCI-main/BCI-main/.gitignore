@@ -1,0 +1,16 @@
+__pycache__/ 
+*.pyc 
+.venv/
+.runtime/
+.install-check/
+.xinlan-data/
+frontend/node_modules/
+frontend/dist/
+frontend/test-results/
+frontend/playwright-report/
+frontend/.npm-cache/
+.desktop-build/
+desktop/bin/
+desktop/obj/
+desktop/dist/
+*.lnk
